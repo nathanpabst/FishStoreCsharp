@@ -29,7 +29,7 @@ namespace FishStore
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             
-            services.AddAuthentication().AddJwtBearer(options =>
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
                 {
                     options.IncludeErrorDetails = true;
                     options.Authority = "https://securetoken.google.com/fish-store-a71e6";
